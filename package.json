@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git@git.oschina.net:happymmall/mmall-fe.git"
   },
-  "author": "Rosen",
+  "author": "yyt",
   "license": "ISC",
   "devDependencies": {
     "css-loader": "^0.28.1",
