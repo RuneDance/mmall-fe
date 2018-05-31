@@ -29,3 +29,28 @@
 * 添加devServer的proxy选项，开发模式下可以直接访问接口，不再需要charles或fiddler做代理
 
 * 将启动命令中的inline和port选项从命令移到了配置文件中
+
+## 环境搭建
+```
+1、npm install webpack -g 全局安装 (windows系统全局不要安装最新的webpack默认和局部安装的版本保持一致)(npm uninstall webpack -g)
+2、npm init
+3、npm install webpack@4.2.0 --save-dev
+
+充:npm install --save-dev webpack-cli    (2.0.13)
+
+4、webpack -v 查看版本号
+ 全局安装 不用版本号 局部安装 需要版本号
+ 
+ 5、npm install jquery --save
+ 6、npm uninstall jquery --save
+ 
+ 7、npm install css-loader style-loader --save-dev
+ 8、npm install extract-text-webpack-plugin@4.0.0-beta.0 --save-dev
+ 9、npm install html-webpack-plugin --save-dev
+ 10、npm install html-loader --save-dev
+ 11、npm install url-loader --save-dev
+ 12、npm install webpack-dev-server@3.1.1 --save-dev (npm install webpack-dev-server@3.1.1 -g)
+充:  npm install file-loader@1.1.11 --save-dev
+ 13、npm install font-awesome@4.7.0 --save
+ 14、npm install hogan.js --save
+```
