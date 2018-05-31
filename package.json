@@ -1,7 +1,7 @@
 {
   "name": "mmall-fe",
   "version": "1.0.1",
-  "description": "mmall前端代码",
+  "description": "mmall front end code!",
   "main": "index.js",
   "scripts": {
     "dev": "./node_modules/.bin/webpack-dev-server",
@@ -23,7 +23,7 @@
     "html-webpack-plugin": "^2.28.0",
     "style-loader": "^0.17.0",
     "url-loader": "^0.5.8",
-    "webpack": "^1.15.0",
+    "webpack": "^4.0.0",
     "webpack-dev-server": "^1.16.5"
   },
   "dependencies": {
