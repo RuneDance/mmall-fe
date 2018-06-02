@@ -1,5 +1,4 @@
-
-##项目初始化步骤
+## 项目初始化步骤
 
 * 安装nodejs环境,推荐使用v6.12.3
     下载地址 : https://nodejs.org/download/release/v6.12.3/
@@ -14,9 +13,7 @@
 * 开发模式下预览项目
     访问：http://localhost:8088/dist/view/index.html
 
-
----
-##mmall-fe v1.0.1改动：
+## mmall-fe v1.0.1改动：
 
 * 升级nodejs版本到6.12.3（升级后需要把原项目中node_modules目录删除，重新执行初始化）
 
@@ -30,27 +27,24 @@
 
 * 将启动命令中的inline和port选项从命令移到了配置文件中
 
-## 环境搭建
+## 环境搭建(全局安装不需要添加版本号、局部安装需要添加版本号)
+
 ```
-1、npm install webpack -g 全局安装 (windows系统全局不要安装最新的webpack默认和局部安装的版本保持一致)(npm uninstall webpack -g)
+(windows系统全局不要安装最新的webpack默认和局部安装的版本保持一致)
+1、npm install webpack -g 全局安装 (npm uninstall webpack -g)
 2、npm init
 3、npm install webpack@4.2.0 --save-dev
-
-4:npm install --save-dev webpack-cli    (2.0.13)
-
+4、npm install --save-dev webpack-cli    (2.0.13)
 5、webpack -v 查看版本号
- 全局安装 不用版本号 局部安装 需要版本号
- 
-6、npm install jquery --save
-7、npm uninstall jquery --save
-8、npm install css-loader style-loader --save-dev
-9、npm install extract-text-webpack-plugin@4.0.0-beta.0 --save-dev
-10、npm install html-webpack-plugin --save-dev
-11、npm install html-loader --save-dev
-12、npm install url-loader --save-dev
-13、npm install webpack-dev-server@3.1.1 --save-dev (npm install webpack-dev-server@3.1.1 -g)
-14、npm install file-loader@1.1.11 --save-dev
-15、npm install font-awesome@4.7.0 --save
-16、npm install hogan.js --save 
-17、npm install font-awesome --save-dev
+6、npm install jquery --save (npm uninstall jquery --save)
+7、npm install css-loader style-loader --save-dev
+8、npm install extract-text-webpack-plugin@4.0.0-beta.0 --save-dev
+9、npm install html-webpack-plugin --save-dev
+10、npm install html-loader --save-dev
+11、npm install url-loader --save-dev
+12、npm install webpack-dev-server@3.1.1 --save-dev (npm install webpack-dev-server@3.1.1 -g)
+13、npm install file-loader@1.1.11 --save-dev
+14、npm install font-awesome@4.7.0 --save
+15、npm install hogan.js --save 
+16、npm install font-awesome --save-dev
 ```
