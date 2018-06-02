@@ -1,9 +1,10 @@
 /*
-* @Author: Rosen
-* @Date:   2017-05-08 15:28:19
-* @Last Modified by:   Rosen
-* @Last Modified time: 2018-03-27 13:10:36
+* @Author: yuyongtao
+* @Date:   2018-06-02 10:34:26
+* @Last Modified by:   yuyongtao
+* @Last Modified time: 2018-06-02 16:11:53
 */
+
 var webpack             = require('webpack');
 var ExtractTextPlugin   = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin   = require('html-webpack-plugin');
