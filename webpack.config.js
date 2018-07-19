@@ -2,7 +2,7 @@
 * @Author: yuyongtao
 * @Date:   2018-06-02 10:34:26
 * @Last Modified by:   yuyongtao
-* @Last Modified time: 2018-06-02 16:11:53
+* @Last Modified time: 2018-07-19 10:58:42
 */
 
 var webpack             = require('webpack');
@@ -58,7 +58,7 @@ var config = {
         *  而publicPath和filename特性的设置要保留
         */
         // path        : __dirname + '/dist/',
-        publicPath  : 'dev' === WEBPACK_ENV ? '/dist/' : '//s.happymmall.com/mmall-fe/dist/',
+        publicPath  : 'dev' === WEBPACK_ENV ? '/dist/' : '//s.mmall.com/mmall-fe/dist/',
         filename    : 'js/[name].js'
     },
     externals : {
@@ -192,7 +192,7 @@ var config = {
         inline: true,
         proxy : {
             '**/*.do' : {
-                target: 'http://test.happymmall.com',
+                target: 'http://test.mmall.com',
                 changeOrigin : true
             }
         }
