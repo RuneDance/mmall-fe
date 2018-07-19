@@ -14,7 +14,7 @@
     2、npm init
     3、npm install webpack@4.2.0 --save-dev 安装webpack
     4、webpack -v 查看版本号
-    5、npm install css-loader@0.28.11 extract-text-webpack-plugin@4.0.0-beta.0 file-loader@1.1.11 font-awesome@4.7.0 html-loader@0.5.5 html-webpack-plugin@3.2.0 style-loader@0.21.0 url-loader@1.0.1 webpack-cli@2.1.4 ebpack-dev-server@3.1.1 --save-dev
+    5、npm install css-loader@0.28.11 extract-text-webpack-plugin@4.0.0-beta.0 file-loader@1.1.11 font-awesome@4.7.0 html-loader@0.5.5 html-webpack-plugin@3.2.0 style-loader@0.21.0 url-loader@1.0.1 webpack-cli@2.1.4 webpack-dev-server@3.1.1 --save-dev
     6、npm install font-awesome@4.7.0 hogan.js@3.0.2 --save
 启动项目：
     开发模式: npm run dev (windows命令为：npm run dev_win)
