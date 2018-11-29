@@ -30,6 +30,7 @@ var config = {
     * 【新增】：新增mode参数，webpack4中要指定模式，可以放在配置文件这里，也可以放在启动命令里，如--mode production
     */
     mode : 'dev' === WEBPACK_ENV ? 'development' : 'production',
+    //devtool:'cheap-module-source-map',
     /* 
     * 【改动】：删除了入口文件的中括号，可选的改动，没什么影响
     */
@@ -58,7 +59,7 @@ var config = {
         *  而publicPath和filename特性的设置要保留
         */
         // path        : __dirname + '/dist/',
-        publicPath  : 'dev' === WEBPACK_ENV ? '/dist/' : '//s.mmall.com/mmall-fe/dist/',
+        publicPath  : 'dev' === WEBPACK_ENV ? '/dist/' : '//47.98.140.133/mmall-fe/dist/',
         filename    : 'js/[name].js'
     },
     externals : {
@@ -159,11 +160,21 @@ var config = {
         /* 
         * 【移除】：webpack4里面移除了commonChunksPulgin插件
         */
-        // // 独立通用模块到js/base.js
-        // new webpack.optimize.CommonsChunkPlugin({
-        //     name : 'common',
-        //     filename : 'js/base.js'
-        // }),
+        // 独立通用模块到js/base.js
+        //  new webpack.optimize.CommonsChunkPlugin({
+        //      name : 'common',
+        //      filename : 'js/base.js'
+        //  }),
+
+        /*new webpack.optimize.SplitChunkPlugin({
+            chunks:"all",
+            minChunks:2,
+            name:"common",
+            filename : "js/base.js"
+        }),*/
+
+        // webpack-dev-server浏览器自动刷新
+        // new webpack.HotModuleReplacementPlugin(),
         // 把css单独打包到文件里
         new ExtractTextPlugin("css/[name].css"),
         // html模板的处理
@@ -182,17 +193,42 @@ var config = {
         new HtmlWebpackPlugin(getHtmlConfig('user-center-update', '修改个人信息')),
         new HtmlWebpackPlugin(getHtmlConfig('user-pass-update', '修改密码')),
         new HtmlWebpackPlugin(getHtmlConfig('result', '操作结果')),
-        new HtmlWebpackPlugin(getHtmlConfig('about', '关于MMall')),
+        new HtmlWebpackPlugin(getHtmlConfig('about', '关于MMall'))
     ],
+    optimization: {
+        splitChunks: {
+            cacheGroups: {
+                commons: {
+                    name:"common",
+                    filename : "js/base.js",
+                    chunks: 'initial',
+                    minChunks: 2
+                }
+            }
+        }
+    },
     /* 
     * 【新增】：在v1.0.1版本中新增了devServer的配置，用自带的代理就可以访问接口
     */
+    //devServer: {
+    //    port: 80,
+    //    inline: true,
+	//disableHostCheck: true,
+    //	host:"47.98.140.133",
+    //    proxy : {
+    //        '**/*.do' : {
+    //            target: 'http://47.98.140.133:8088',
+    //            changeOrigin : true
+    //        }
+    //    }
+    //}
+
     devServer: {
-        port: 8088,
+        port: 80,
         inline: true,
         proxy : {
             '**/*.do' : {
-                target: 'http://test.mmall.com',
+                target: 'http://s.flowingsand.com',
                 changeOrigin : true
             }
         }
